@@ -109,6 +109,21 @@ img.logo {
     transform: translateX(-50%);
 }
 
+@media screen and (max-width: 500px) {
+    img.logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .logo {
+        position:absolute;
+        z-index: 100;
+        top: 5px;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+    }
+}
+
 .btn {
     margin-left: auto !important;
     margin-right: auto !important;
