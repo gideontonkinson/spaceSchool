@@ -109,7 +109,7 @@ img.logo {
     transform: translateX(-50%);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
     img.logo {
         width: 100px;
         height: auto;
