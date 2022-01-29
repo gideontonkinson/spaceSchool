@@ -116,11 +116,11 @@ img.logo {
     }
 
     .logo {
-        position:absolute;
-        z-index: 100;
         top: 5px;
-        transform: translateY(-50%);
-        transform: translateX(-50%);
+    }
+
+    #homepage-banner {
+        background-size: unset !important;
     }
 }
 
