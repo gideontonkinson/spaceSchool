@@ -21,13 +21,14 @@ img {
 }
 
 .nav-link.active {
-    background-color: #F29727;
+    background-color: #426678;
     border-radius: 5px;
+    color: #fff !important;
 }
 
 .nav-link:hover {
-    color: #fff;
-    background-color: #f1a64a;
+    color: #fff !important;
+    background-color: #4d7488;
     border-radius: 5px;
 }
 
@@ -108,27 +109,76 @@ img.logo {
     transform: translateX(-50%);
 }
 
+.btn {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 5px;
+    margin: 5px;
+    background-color: #52c5ed !important;
+    color: #fff !important;
+}
 
+.btn:hover {
+    background-color: #48afd1 !important;
+    color: #fff !important;
+}
+
+#footer{
+    align-items: center;
+    text-align: center;
+}
+
+#footer h4, #footer ul a ,#footer ul{
+    list-style-type: none;
+    margin: none;
+    width:auto;
+    padding: 0;
+}
 
 #homepage-banner {
     background-attachment:unset;
-    height: 1000px;
-    background-image: url(../images/avonbuilding.jpeg);
+    height: 750px;
+    background-image: url(../images/school.jpeg);
     background-color: #666;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: 0px
+    background-position-y: -50px;
 }
 
-#homepage-banner h1 {
-    color:#0D0D0D;
-    float:left;
-    text-align: center;
-    margin-top: 10%;
-    padding: 1%;
-    background-color: rgba(255, 255, 255, 0.712);
-    border-radius: 10px;
-    height: fit-content;
+#admissions-banner {
+    background-attachment:unset;
+    height: 500px;
+    background-image: url(../images/mooncolony.jpeg);
+    background-color: #666;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: -300px;
+}
+
+#studentlife-banner {
+    background-attachment:unset;
+    height: 500px;
+    background-image: url(../images/bedroom.jpg);
+    background-color: #666;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: -50px;
+}
+
+#faculty-banner {
+    background-attachment:unset;
+    height: 500px;
+    background-image: url(../images/spacesuits.jpeg);
+    background-color: #666;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-y: 0px;
 }
