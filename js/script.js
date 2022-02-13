@@ -42,7 +42,7 @@ function fillFlghtData(json){
             data+= ' - ' + json.results[i].launch_service_provider.type + '</li>'
         }
         else {
-            data +='<li>';
+            data +='</li>';
         }
         data += '<li class = "list-group-item hourly"><b>Launch Location:</b>  <a href = "' + json.results[i].pad.map_url + '">' + json.results[i].pad.location.name + '</a></li>';
         data += '<li class = "list-group-item hourly"><b>Launch Pad Name:</b>  ' + json.results[i].pad.name  + '</li>';
