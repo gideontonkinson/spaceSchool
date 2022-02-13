@@ -7,7 +7,9 @@ document.getElementById("flightSubmit").addEventListener("click", function(event
 /** Calls the Space Devs API to get info on upcoming rocket launches */
 function getFlights(){
     const input = document.getElementById("flightInput").value;
-    const url = "https://ll.thespacedevs.com/2.2.0/launch/upcoming/?search" + input +"&is_crewed=false&include_suborbital=true&related=false&hide_recent_previous=false";
+    const search = (input.replace(" ", "%20")).toLowerCase();
+    const url = "https://ll.thespacedevs.com/2.2.0/launch/upcoming/?search=" + search +"&is_crewed=false&include_suborbital=true&related=false&hide_recent_previous=false";
+    console.log(url);
     fetch(url)
         .then(function(response) {
             return response.json();
