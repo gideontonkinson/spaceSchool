@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel - Musk School of Space</title>
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png" />
+</head>
+
+<body>
+    <!-- Navagation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Musk School of Space</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../index.html">Home</a>
+                    <a class="nav-link" href="../pages/admissions.html">Admissions</a>
+                    <a class="nav-link" href="../pages/studentlife.html">Student Life</a>
+                    <a class="nav-link" href="../pages/faculty.html">Faculty</a>
+                    <a class="nav-link active" aria-current="page" href="../pages/travel.html">Travel</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Logo and Banner -->
+    <div class="logo-container d-flex align-items-center">
+        <div class="logo-container center-elem align-self-center">
+            <img class="logo" src="../images/favicon.png" alt="logo">
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex justify-content-center" id="travel-banner">
+    </div>
+
+    <!-- Search Bar -->
+  <div class = "container mt-5">
+    <h1 class = "text-center">Travel</h1>
+    <p>
+        Here you can search flights to and from the moon so that you can book one for your next trip home to family, or trip back to school. 
+        If you have any trouble booking a flight reach out to Professor Teleteshanko and she can help you. If you have never travelled in space some of the 
+        largest companies are SpaceX, Nasa, Rocket Lab LTD, Astra Space and United Launch Alliance. Additonally you can leave the search bar 
+        empty to get the next 10 flights with any company.
+    </p>
+      <form class = "">
+        <div class = "row mt-3">
+          <div class = "col-lg-4 col-sm-6 d-flex align-items-center mt-3">
+            <label class = "center-elem text-center"><b>Search a Flight</b></label>
+          </div>
+          <div class = "col-lg-4 col-sm-6 d-flex align-items-center mt-3">
+            <input class = "center-elem w-100" id="flightInput" autocomplete="off" type="text"></input>
+          </div>
+          <div class = "col-lg-4 col-sm-12 d-flex align-items-center mt-3">
+            <input class = "center-elem" id="flightSubmit" type="submit" value="Search"></input>
+          </div>
+          <div class= "col-xs-12">
+            <p class = "text-center" id = "errorLog"></p>
+          </div>
+        </div>
+      </form>
+  </div>
+
+  <!-- Flight Info (Dynamically Filled by Javascript in script.js)-->
+  <div class = "container mt-5" id = "flightInfo"></div>
+
+    <!-- Footer -->
+    <div class="container mt-5" id="footer">
+        <h4>How to contact us</h4>
+        <ul>
+            <li>
+                <a href="../pages/faculty.html">Faculty Contact Info</a>
+            </li>
+            <li>
+                Address - 500 Ave N 400 E, Level 5-7, Moon Base Alpha, Moon 48395-39684
+            </li>
+            <li>
+                <a href="email:mainoffice@muskspace.edu">mainoffice@muskspace.edu</a>
+            </li>
+            <li>
+                <a href="https://github.com/gideontonkinson/spaceSchool.git">GitHub Repository</a>
+            </li>
+            <li>
+                <i>Banner Image - Falcon 9 Launch from Space.com Other Images - API</i><br>
+                <i>API - <a href = "https://thespacedevs.com/llapi">The Space Devs</a></i>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src = "../js/script.js"></script>
+    <script src = "../js/bootstrap.min.js"></script>
+</body>

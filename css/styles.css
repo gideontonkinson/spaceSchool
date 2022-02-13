@@ -49,6 +49,10 @@ p {
     line-height: 2.5;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 img.img-block {
     display: block;
     width: 90%;
@@ -92,26 +96,27 @@ img.fill-container {
     float: right;
 }
 
+/** Logo Styling*/
 .logo-container {
     position: relative;
 }
 
 img.logo {
-    width: 200px;
+    width: 125px;
     height: auto;
 }
 
 .logo {
     position:absolute;
-    z-index: 100;
-    top: -50px;
+    z-index:98;
+    top: 0px;
     transform: translateY(-50%);
     transform: translateX(-50%);
 }
 
 @media screen and (max-width: 1000px) {
     img.logo {
-        width: 100px;
+        width: 75px;
         height: auto;
     }
 
@@ -138,6 +143,7 @@ img.logo {
     color: #fff !important;
 }
 
+/** Footer Styling */
 #footer{
     align-items: center;
     text-align: center;
@@ -150,50 +156,81 @@ img.logo {
     padding: 0;
 }
 
+/** Banners */
 #homepage-banner {
-    background-attachment:unset;
-    height: 750px;
+    height: 500px;
     background-image: url(../images/school.jpeg);
     background-color: #666;
+    background-position-y: 0px;
+    background-position-x: center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: -50px;
 }
 
 #admissions-banner {
-    background-attachment:unset;
     height: 500px;
     background-image: url(../images/mooncolony.jpeg);
     background-color: #666;
+    background-position-y: -150px;
+    background-position-x: center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: -300px;
 }
 
 #studentlife-banner {
-    background-attachment:unset;
     height: 500px;
     background-image: url(../images/bedroom.jpg);
     background-color: #666;
+    background-position-y: -125px;
+    background-position-x: center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: -50px;
 }
 
 #faculty-banner {
-    background-attachment:unset;
-    height: 500px;
+    height: 700px;
     background-image: url(../images/spacesuits.jpeg);
     background-color: #666;
+    background-position-y: center;
+    background-position-x: center;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    background-position-y: 0px;
+}
+
+#travel-banner {
+    height: 500px;
+    background-image: url(../images/rocketlaunch.jpeg);
+    background-color: #666;
+    background-position-y: -125px;
+    background-position-x: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+input[type=text] {
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #426678;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+#flightSubmit {
+    border-radius: 5px;
+    color: white;
+    background-color: #426678;
+    padding: 10px;
+    border-style: none;
 }
