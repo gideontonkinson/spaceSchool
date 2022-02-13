@@ -9,19 +9,13 @@ function getFlights(){
     const input = document.getElementById("flightInput").value;
     const search = (input.replace(" ", "%20")).toLowerCase();
     const url = "https://ll.thespacedevs.com/2.2.0/launch/upcoming/?search=" + search +"&is_crewed=false&include_suborbital=true&related=false&hide_recent_previous=false";
-    console.log(url);
     fetch(url)
         .then(function(response) {
             return response.json();
         }).then(function(json) {
-            if(json.message != null){
-                if(json.cod == '400'){
-                    throw new Error("Flight cannot be found");
-                } else {
-                    throw new Error("Error Code: " + json.cod + " - " + json.message);
-                }
+            if(json.detail != null){
+                throw new Error("Error: " + json.detail);
             }
-            console.log(json);
             document.getElementById("flightInfo").innerHTML = fillFlghtData(json);
         }).catch(function handleError(error){
             document.getElementById("errorLog").innerHTML = error.message;
@@ -31,8 +25,11 @@ function getFlights(){
 /** Displays an image, and information about upcoming flights */
 function fillFlghtData(json){
     var data = '';
+    if(json.results == null){
+        data += '<p>Sorry there are no upcoming flights from ' + document.getElementById("flightInput").value; + '</p>';
+    }
     document.getElementById("errorLog").innerHTML = "";
-    data += '<h3 class = "text-center" >Flights</h3>';
+    data += '<h3 class = "text-center" >Upcoming Flights</h3>';
     for(var i = 0; i < (json.results).length; i++){
         data += '<div class = "container mt-3 mt-5">';
         data += '<h4 class = "text-center"><b>Flight Time:</b> '+ toDateTime(json.results[i].net) + '</h4>';
