@@ -37,7 +37,13 @@ function fillFlghtData(json){
         data += '<div class = "row d-flex align-items-center">';
         data += '<div class = "col-md-6 col-sm-12 center-elem">';//Start of Flight Data Column
         data += '<ul class = "list-group list-group-flush">'
-        data += '<li class = "list-group-item hourly"><b>Company:</b>  ' + json.results[i].launch_service_provider.name + ' - ' + json.results[i].launch_service_provider.type + '</li>'
+        data += '<li class = "list-group-item hourly"><b>Company:</b>  ' + json.results[i].launch_service_provider.name;
+        if(json.results[i].launch_service_provider.type != null){
+            data+= ' - ' + json.results[i].launch_service_provider.type + '</li>'
+        }
+        else {
+            data +='<li>';
+        }
         data += '<li class = "list-group-item hourly"><b>Launch Location:</b>  <a href = "' + json.results[i].pad.map_url + '">' + json.results[i].pad.location.name + '</a></li>';
         data += '<li class = "list-group-item hourly"><b>Launch Pad Name:</b>  ' + json.results[i].pad.name  + '</li>';
         data += '<li class = "list-group-item hourly"><b>Rocket:</b>  <a href = "' + json.results[i].rocket.configuration.url + '">' + json.results[i].rocket.configuration.full_name + '</a></li>';
