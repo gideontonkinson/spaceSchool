@@ -13,6 +13,7 @@ function getFlights(){
         .then(function(response) {
             return response.json();
         }).then(function(json) {
+            console.log(json);
             if(json.detail != null){
                 throw new Error("Error: " + json.detail);
             }
@@ -53,8 +54,10 @@ function fillFlghtData(json){
         if(json.results[i].failreason != ""){
             data += '<li class = "list-group-item hourly"><b>Failed To Launch Reason:</b>  ' + json.results[i].failreason + '</li>';
         }
-        data += '<li class = "list-group-item hourly"><b>Mission ID:</b>  ' + json.results[i].mission.name + '</li>';
-        data += '<li class = "list-group-item hourly"><b>Orbit Path:</b>  ' + json.results[i].mission.orbit.name + '</li>';
+        if(json.results[i].mission != null){
+            data += '<li class = "list-group-item hourly"><b>Mission ID:</b>  ' + json.results[i].mission.name + '</li>';
+            data += '<li class = "list-group-item hourly"><b>Orbit Path:</b>  ' + json.results[i].mission.orbit.name + '</li>';
+        }
         data += '<li class = "list-group-item hourly"><a href = "' + json.results[i].launch_service_provider.url + '"><b>Book Now</b></a></li>';
         data += '</ul>'//Closes Flight Data List
         data += '</div>'//Closes Flight Data Column
