@@ -35,7 +35,7 @@ function fillFlghtData(json){
         data += '<div class = "container mt-3 mt-5">';
         data += '<h4 class = "text-center"><b>Flight Time:</b> '+ toDateTime(json.results[i].net) + '</h4>';
         data += '<div class = "row d-flex align-items-center">';
-        data += '<div class = "col-md-6 col-sm-12 center-elem">';//Start of Flight Data Column
+        data += '<div class = "order-sm-first order-last col-md-6 col-sm-12 center-elem">';//Start of Flight Data Column
         data += '<ul class = "list-group list-group-flush">'
         data += '<li class = "list-group-item hourly"><b>Company:</b>  ' + json.results[i].launch_service_provider.name;
         if(json.results[i].launch_service_provider.type != null){
@@ -61,7 +61,7 @@ function fillFlghtData(json){
         data += '<li class = "list-group-item hourly"><a href = "' + json.results[i].launch_service_provider.url + '"><b>Book Now</b></a></li>';
         data += '</ul>'//Closes Flight Data List
         data += '</div>'//Closes Flight Data Column
-        data += '<div class = "col-md-6 col-sm-12 center-elem"><img class = "img-block" alt = "rocket" src = "' + json.results[i].image+ '"/></div>';
+        data += '<div class = "order-sm-last order-first col-md-6 col-sm-12 center-elem"><img class = "img-block" alt = "rocket" src = "' + json.results[i].image+ '"/></div>';
         data += '</div>'//Closes Info and Img Row
         data += '</div>'; //Close the Flight Div
     }
